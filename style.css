@@ -1973,3 +1973,69 @@ html {
   0% { transform: translate(-50%, -50%) rotate(0deg); }
   100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+/* === New Section Styling (matches existing palette) ============ */
+.section {
+  padding: 80px 0;
+  background: var(--color-background);
+}
+
+.section.alt {                                       /* zebra striping */
+  background: #eef2f6;
+}
+
+.section-title {
+  font: 700 32px "Poppins", sans-serif;
+  color: var(--color-primary);                      /* #004AAD */
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-sub {
+  font: 500 18px "Poppins", sans-serif;
+  color: var(--color-slate-500);                    /* secondary text */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--color-surface);                 /* #FFFFFF / light */
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  font: 600 20px "Poppins", sans-serif;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 18px;
+  color: var(--color-text);                         /* body colour */
+  line-height: 1.5;
+}
+
+/* palette variables (if not already declared) */
+:root{
+  --color-primary:#004AAD;
+  --color-secondary:#00BFA6;
+  --color-accent:#FFD700;
+  --color-background:#F8FAFC;
+  --color-surface:#FFFFFF;
+  --color-text:#333;
+  --color-slate-500:#626C71;
+}
